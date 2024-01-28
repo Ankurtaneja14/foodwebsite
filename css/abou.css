@@ -229,7 +229,7 @@ section{
 }
 .box1{
     flex-direction: column;
-    width: fit-content;
+    width: 30vw;
     align-items: center;
     flex-wrap: wrap;
     display: flex;
