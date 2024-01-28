@@ -141,6 +141,7 @@
     #about a{
         display: block;
         margin: auto;
+        width: fit-content;
         margin-top: 2vw;
     }
     #about::before{
