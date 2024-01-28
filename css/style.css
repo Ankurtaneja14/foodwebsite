@@ -1,0 +1,344 @@
+    *{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    :root {
+        --primary-color: #1e2226;
+        --secondary-color: #c09b68;
+        --button: #6f5940;
+        --text: #26221e; 
+        --background: #fdfcf9;
+    }
+
+    a{
+        color: white;
+    }
+
+    h1{
+        font-size: 4vw;
+        margin: 1vw;
+        color: var(--text);
+    }
+    p{
+        font-size: 2vw;
+        margin: 1vw;
+        color: var(--text);
+    }
+    body {
+        background-color: var(--primary-color);
+    }
+    header{
+        display: flex;
+    }
+    nav{
+        width: fit-content;
+        margin: auto;
+    }
+    .nav-links {
+        text-decoration: none; /* Remove default underline */
+        position: relative;
+        margin: 2vw;
+        font-size: 1.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+      }
+      .nav-links::before {
+        content: "";
+        position: absolute;
+        width: 0; /* Start with no width */
+        height: 2px; /* Set the underline height */
+        bottom: 0; /* Position it at the bottom of the anchor */
+        background-color: #3498db; /* Set the underline color */
+        transition: width 0.3s ease-in-out; /* Add width transition for the underline */
+        transform-origin: center; /* Set the transformation origin to the center */
+      }
+      
+      .nav-links:hover {
+        color: #fbfbfb; /* Change text color on hover */
+      }
+
+      .nav-links:hover::before {
+        width: 100%; /* Increase width to 100% on hover */
+        background-color: #ffffff; /* Change underline color on hover */
+      }
+    .button{
+        width: fit-content;
+        margin: auto 2vw;
+        padding: 0.7vw 1.6vw;
+        background-color: var(--button);
+        border-radius: 0.5vw;
+      }
+      .button:hover{
+        opacity: 0.7;
+      }
+      .button{
+        font-size: 1.2vw;
+      }
+      .button:active{
+        text-decoration: underline;
+        opacity: 1;
+      }
+
+    .logo{
+        width: 8vw;
+        margin: 2vw;
+    }
+    section{
+        background-color: var(--background);
+        color: var(--text);
+        width: 90%;
+        margin: auto;
+        border-radius: 2vw;
+    }
+    #hero{
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        width: 100%;
+        margin-top: 5vw;
+        margin-bottom: 14vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2vw;
+    }
+    #hero::before{
+        content: "";
+        position: absolute;
+        background: url(../assets/cover.jpg) no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 44vw;
+        top: 0px;
+        z-index: 0;
+        opacity: 0.2;
+    }
+    #hero h1{
+        color: var(--secondary-color);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 5vw;
+    }
+    #hero p{
+        color: var(--secondary-color);
+        font-size: 2.2vw;
+    }
+    #about h1{
+        margin-left: 10vw;
+    }
+    #about p{
+        margin-left: 12vw;
+    }
+    #about{
+        padding: 2vw;
+    }
+    #about a{
+        display: block;
+        margin: auto;
+        margin-top: 2vw;
+    }
+    #about::before{
+        content: "";
+        position: absolute;
+        background-color: var(--primary-color);
+        width: 1vw;
+        height: 33vw;
+        left: 10vw;
+        top: 47vw;
+        z-index: 0;
+
+    }
+    #services {
+        margin-top: 1vw;
+        padding: 2vw;
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .service-box {
+        position: relative;
+        display: flex;
+        border: 2px solid var(--primary-color);
+        border-radius: 2vw;
+        padding: 2vw;
+        margin: 1vw;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    
+    .service-box:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .icon {
+        width: 12vw;
+        height: 10vw;
+        border: 1px solid black;
+        border-radius: 1.5vw;
+        margin: 0 auto; /* Center the icon */
+        transform-origin: left center; /* Set the transform origin to the left center */
+        transition: transform 0.3s ease-in-out; /* Added transform animation */
+    }
+    
+    .service-box:hover .content-box{
+        display: flex;
+    }
+    
+    .content-box {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 60vw;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        transition: .5s ease;
+    }
+    
+    .service-box:hover .icon + .content-box {
+        opacity: 1;
+    }
+    
+    #clients{
+        background-color: var(--primary-color);
+        padding: 2vw;
+    }
+    #clients h1{
+        color: var(--secondary-color);
+    }
+    #contact {
+        padding: 2vw;
+        margin-bottom: 5vw;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2.5vw;
+    }
+    
+    .contact-item {
+        text-align: center;
+    }
+    
+    .contact-item ion-icon {
+        font-size: 3vw;
+        margin-bottom: 1vw;
+    }
+    
+    .contact-form {
+        text-align: center;
+    }
+    
+    .contact-form h3 {
+        font-size: 2vw;
+        margin-bottom: 1.6vw;
+    }
+    
+    #contactForm {
+        max-width: 45vw;
+        margin: 0 auto;
+    }
+    
+    #contactForm label {
+        display: block;
+        margin-bottom: .6vw;
+        color: var(--primary-color);
+    }
+    
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%;
+        padding: .6vw;
+        margin-bottom: 1vw;
+        border: 2px solid var(--primary-color);
+        border-radius: .5vw;
+    }
+    
+    #contactForm button {
+        background-color: var(--button);
+        color: white;
+        padding: 1vw 2vw;
+        font-size: 16px;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    #contactForm button:hover {
+        background-color:  var(--secondary-color);
+    }
+    
+    /* Update your CSS for Footer */
+    footer {
+        background-color:  var(--primary-color);
+        color: white;
+        padding: 30px 0;
+    }
+    
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 5vw auto;
+    }
+    
+    .footer-section {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    footer p{
+        color: var(--secondary-color);
+    }
+    .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    ul li {
+        margin-bottom: 10px;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+    
+    ul li a:hover {
+        color: var(--secondary-color);
+    }
+    
+    .social-icons {
+        display: flex;
+    }
+    
+    .social-icons a {
+        margin-right: 15px;
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .social-icons a:hover {
+        color: var(--secondary-color);
+    }
+
+    
